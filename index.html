@@ -84,7 +84,39 @@
     background:radial-gradient(circle,rgba(197,165,114,.10) 0%,transparent 70%);
     border-radius:50%;
   }
-  .hero-wrap{max-width:1200px;margin:0 auto;position:relative;z-index:2}
+  .hero-wrap{
+    max-width:1200px;margin:0 auto;position:relative;z-index:2;
+    display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center;
+  }
+  .hero-content{min-width:0}
+  .hero-photo{
+    position:relative;width:100%;max-width:380px;justify-self:end;
+    aspect-ratio:4/5;border-radius:20px;overflow:hidden;
+    box-shadow:0 30px 80px rgba(0,0,0,.35),0 0 0 1px rgba(197,165,114,.4);
+    background:linear-gradient(135deg,#0E2E4D 0%,#1E456E 100%);
+  }
+  .hero-photo img{
+    width:100%;height:100%;object-fit:cover;display:block;
+  }
+  .hero-photo .monogram{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    flex-direction:column;color:var(--gold);
+    background:
+      radial-gradient(circle at 30% 20%, rgba(197,165,114,.25) 0%, transparent 55%),
+      linear-gradient(135deg,#0E2E4D 0%,#1E456E 100%);
+  }
+  .hero-photo .monogram .lv{
+    font-family:'Playfair Display',serif;font-size:140px;font-weight:700;
+    line-height:1;letter-spacing:-4px;
+  }
+  .hero-photo .monogram .ml{
+    margin-top:14px;font-size:11px;letter-spacing:3px;
+    color:rgba(255,255,255,.6);text-transform:uppercase;font-weight:600;
+  }
+  .hero-photo::after{
+    content:"";position:absolute;left:-10px;bottom:-10px;width:60%;height:60%;
+    border:1px solid var(--gold);border-radius:20px;z-index:-1;opacity:.4;
+  }
   .hero-tag{
     display:inline-block;
     border:1px solid var(--gold);color:var(--gold);
@@ -367,7 +399,9 @@
       flex-direction:column;padding:18px;border-bottom:1px solid var(--line);gap:14px;}
     .nav-links.open{display:flex}
     .nav-toggle-mobile{display:block}
-    .about-grid,.lrs-grid,.skills-wrap{grid-template-columns:1fr;gap:30px}
+    .about-grid,.lrs-grid,.skills-wrap,.hero-wrap{grid-template-columns:1fr;gap:30px}
+    .hero-photo{max-width:280px;justify-self:center;order:-1}
+    .hero-photo::after{display:none}
     .comp-grid,.pillars-grid{grid-template-columns:1fr 1fr}
     .pl-grid{grid-template-columns:1fr 1fr}
     .kpis{grid-template-columns:1fr 1fr;margin-top:-30px}
@@ -416,17 +450,27 @@
 <!-- HERO -->
 <header class="hero">
   <div class="hero-wrap">
-    <span class="hero-tag" data-i18n="hero-tag">Senior Executive · Operations & Strategic Events</span>
-    <h1>
-      <span data-i18n="hero-title-1">Liderança estratégica</span><br>
-      <span class="accent serif" data-i18n="hero-title-2">orientada a dados.</span>
-    </h1>
-    <p class="hero-sub" data-i18n="hero-sub">
-      20+ anos transformando ecossistemas complexos em modelos de negócio escaláveis e eficientes — com excelência operacional, governança financeira e foco em ROI.
-    </p>
-    <div class="hero-cta">
-      <a href="#cases" class="btn btn-primary" data-i18n="hero-cta-1">Ver cases →</a>
-      <a href="#contact" class="btn btn-outline" data-i18n="hero-cta-2">Falar comigo</a>
+    <div class="hero-content">
+      <span class="hero-tag" data-i18n="hero-tag">Senior Executive · Operations & Strategic Events</span>
+      <h1>
+        <span data-i18n="hero-title-1">Liderança estratégica</span><br>
+        <span class="accent serif" data-i18n="hero-title-2">orientada a dados.</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero-sub">
+        20+ anos transformando ecossistemas complexos em modelos de negócio escaláveis e eficientes — com excelência operacional, governança financeira e foco em ROI.
+      </p>
+      <div class="hero-cta">
+        <a href="#cases" class="btn btn-primary" data-i18n="hero-cta-1">Ver cases →</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero-cta-2">Falar comigo</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <!-- Foto local hospedada no próprio repositório. Se falhar, exibe monograma de fallback. -->
+      <img src="foto.jpg" alt="Luiz Vechiato" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="monogram" style="display:none">
+        <span class="lv">LV</span>
+        <span class="ml">Luiz Vechiato</span>
+      </div>
     </div>
   </div>
 </header>

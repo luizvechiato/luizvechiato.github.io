@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luiz Vechiato — Senior Executive · Operations & Strategic Events</title>
+<meta name="description" content="Portfolio executivo de Luiz Vechiato — 20+ anos em Operações e Eventos Corporativos. Liderança estratégica orientada a dados.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0A2540;
+    --navy-2:#143356;
+    --navy-3:#1E456E;
+    --gold:#C5A572;
+    --gold-soft:#E4D3AE;
+    --bg:#F7F8FA;
+    --white:#FFFFFF;
+    --ink:#1A1A1A;
+    --muted:#5A6573;
+    --line:#E5E8EE;
+    --shadow:0 10px 30px rgba(10,37,64,.08);
+    --shadow-lg:0 20px 60px rgba(10,37,64,.15);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:'Playfair Display',serif}
+
+  /* NAVBAR */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    padding:14px 0;
+  }
+  .nav-wrap{
+    max-width:1200px;margin:0 auto;padding:0 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+  }
+  .brand{
+    font-family:'Playfair Display',serif;
+    font-weight:700;font-size:20px;color:var(--navy);
+    letter-spacing:.5px;
+  }
+  .brand span{color:var(--gold)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{
+    color:var(--navy);text-decoration:none;font-size:14px;font-weight:500;
+    transition:color .2s;
+  }
+  .nav-links a:hover{color:var(--gold)}
+  .lang-toggle{
+    display:flex;background:var(--navy);border-radius:30px;padding:4px;
+  }
+  .lang-toggle button{
+    background:transparent;border:0;color:#fff;
+    padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;
+    cursor:pointer;letter-spacing:.5px;transition:all .25s;
+  }
+  .lang-toggle button.active{background:var(--gold);color:var(--navy)}
+  .nav-toggle-mobile{display:none;background:none;border:0;color:var(--navy);font-size:24px;cursor:pointer}
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,var(--navy-3) 100%);
+    color:#fff;padding:140px 28px 100px;position:relative;overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;top:-50%;right:-10%;width:600px;height:600px;
+    background:radial-gradient(circle,rgba(197,165,114,.18) 0%,transparent 70%);
+    border-radius:50%;
+  }
+  .hero::after{
+    content:"";position:absolute;bottom:-30%;left:-10%;width:500px;height:500px;
+    background:radial-gradient(circle,rgba(197,165,114,.10) 0%,transparent 70%);
+    border-radius:50%;
+  }
+  .hero-wrap{max-width:1200px;margin:0 auto;position:relative;z-index:2}
+  .hero-tag{
+    display:inline-block;
+    border:1px solid var(--gold);color:var(--gold);
+    padding:6px 16px;border-radius:30px;font-size:12px;
+    letter-spacing:2px;font-weight:600;text-transform:uppercase;
+    margin-bottom:24px;
+  }
+  .hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(42px,6vw,72px);
+    line-height:1.05;font-weight:700;letter-spacing:-1px;
+    margin-bottom:18px;
+  }
+  .hero h1 .accent{color:var(--gold)}
+  .hero-sub{
+    font-size:clamp(18px,2vw,22px);color:#D9E1EC;
+    max-width:720px;margin-bottom:32px;font-weight:300;
+  }
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 26px;border-radius:8px;font-weight:600;font-size:14px;
+    text-decoration:none;letter-spacing:.3px;transition:all .25s;
+    border:1px solid transparent;cursor:pointer;
+  }
+  .btn-primary{background:var(--gold);color:var(--navy)}
+  .btn-primary:hover{background:var(--gold-soft);transform:translateY(-2px)}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+  .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+
+  /* KPI strip */
+  .kpis{
+    background:#fff;padding:36px 28px;margin-top:-50px;
+    border-radius:14px;box-shadow:var(--shadow-lg);
+    max-width:1140px;margin-left:auto;margin-right:auto;position:relative;z-index:5;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  }
+  .kpi{text-align:center;padding:10px;border-right:1px solid var(--line)}
+  .kpi:last-child{border-right:0}
+  .kpi-num{
+    font-family:'Playfair Display',serif;font-size:42px;font-weight:700;
+    color:var(--navy);line-height:1;display:block;
+  }
+  .kpi-num .small{font-size:24px}
+  .kpi-label{
+    margin-top:8px;font-size:11px;text-transform:uppercase;
+    letter-spacing:1.5px;color:var(--muted);font-weight:600;
+  }
+  .kpi-sub{font-size:13px;color:var(--ink);margin-top:4px}
+
+  /* SECTIONS */
+  section{padding:90px 28px;scroll-margin-top:80px}
+  .wrap{max-width:1140px;margin:0 auto}
+  .eyebrow{
+    display:inline-block;font-size:12px;font-weight:700;letter-spacing:2.5px;
+    color:var(--gold);text-transform:uppercase;margin-bottom:14px;
+  }
+  .section-title{
+    font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,46px);
+    font-weight:700;color:var(--navy);line-height:1.15;margin-bottom:18px;
+    letter-spacing:-.5px;
+  }
+  .section-lead{font-size:17px;color:var(--muted);max-width:760px;margin-bottom:50px}
+  .section-light{background:#fff}
+  .section-dark{background:var(--navy);color:#fff}
+  .section-dark .section-title{color:#fff}
+  .section-dark .section-lead{color:#B8C5D6}
+  .section-dark .eyebrow{color:var(--gold)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:start}
+  .about-text p{color:var(--muted);font-size:16px;margin-bottom:16px}
+  .about-card{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);
+    color:#fff;padding:36px;border-radius:14px;box-shadow:var(--shadow);
+  }
+  .about-card h3{
+    font-family:'Playfair Display',serif;font-size:24px;margin-bottom:18px;
+    color:var(--gold);
+  }
+  .about-card ul{list-style:none;padding:0}
+  .about-card li{
+    padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12);
+    display:flex;justify-content:space-between;font-size:14px;
+  }
+  .about-card li:last-child{border-bottom:0}
+  .about-card li span:first-child{color:#B8C5D6}
+  .about-card li span:last-child{font-weight:600}
+
+  /* COMPETENCES */
+  .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:20px}
+  .comp-card{
+    background:#fff;padding:28px;border-radius:12px;
+    border-top:3px solid var(--gold);box-shadow:var(--shadow);
+    transition:transform .25s,box-shadow .25s;
+  }
+  .comp-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .comp-card h3{
+    color:var(--navy);font-size:18px;font-weight:700;margin-bottom:10px;
+  }
+  .comp-card p{color:var(--muted);font-size:14px;line-height:1.55}
+
+  /* EXPERIENCE TIMELINE */
+  .timeline{position:relative;padding-left:30px;margin-top:30px}
+  .timeline::before{
+    content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--gold);
+  }
+  .tl-item{position:relative;padding-bottom:42px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{
+    content:"";position:absolute;left:-30px;top:6px;width:18px;height:18px;
+    background:var(--white);border:3px solid var(--gold);border-radius:50%;
+  }
+  .tl-period{
+    font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--gold);margin-bottom:4px;
+  }
+  .tl-role{font-size:20px;font-weight:700;color:var(--navy);line-height:1.3}
+  .tl-company{font-size:15px;color:var(--muted);margin-bottom:14px;font-style:italic}
+  .tl-desc{color:var(--muted);font-size:14px;margin-bottom:12px}
+  .tl-bullets{list-style:none;padding:0;margin-top:10px}
+  .tl-bullets li{
+    padding-left:22px;position:relative;margin-bottom:8px;
+    font-size:14px;color:#3A4654;
+  }
+  .tl-bullets li::before{
+    content:"";position:absolute;left:0;top:9px;width:10px;height:2px;background:var(--gold);
+  }
+
+  /* CASES */
+  .case-hero{
+    background:linear-gradient(135deg,#fff 0%,#F0F4FA 100%);
+    border-radius:16px;padding:40px;margin-bottom:40px;
+    box-shadow:var(--shadow);position:relative;overflow:hidden;
+  }
+  .case-hero::before{
+    content:"";position:absolute;top:0;right:0;width:200px;height:100%;
+    background:linear-gradient(90deg,transparent 0%,rgba(197,165,114,.08) 100%);
+  }
+  .case-hero h3{
+    font-family:'Playfair Display',serif;font-size:28px;color:var(--navy);
+    margin-bottom:10px;position:relative;
+  }
+  .case-hero p{color:var(--muted);max-width:700px;position:relative}
+  .case-stats{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+    margin-top:30px;position:relative;
+  }
+  .case-stat{text-align:center}
+  .case-stat-num{
+    font-family:'Playfair Display',serif;font-size:38px;font-weight:700;
+    color:var(--gold);display:block;line-height:1;
+  }
+  .case-stat-label{
+    font-size:12px;text-transform:uppercase;letter-spacing:1.5px;
+    color:var(--muted);font-weight:600;margin-top:6px;
+  }
+
+  /* LRS Comparison */
+  .lrs{
+    background:#fff;border-radius:16px;padding:40px;
+    box-shadow:var(--shadow);margin-bottom:40px;
+  }
+  .lrs h3{
+    font-family:'Playfair Display',serif;font-size:26px;color:var(--navy);
+    margin-bottom:8px;
+  }
+  .lrs > p{color:var(--muted);margin-bottom:28px}
+  .lrs-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .lrs-col{padding:24px;border-radius:10px}
+  .lrs-old{background:#F4F5F7;border:1px solid var(--line)}
+  .lrs-new{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);
+    color:#fff;
+  }
+  .lrs-col h4{
+    font-size:12px;letter-spacing:2px;font-weight:700;text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  .lrs-old h4{color:var(--muted)}
+  .lrs-new h4{color:var(--gold)}
+  .lrs-col .row{
+    padding:10px 0;border-bottom:1px solid rgba(0,0,0,.08);font-size:14px;
+  }
+  .lrs-new .row{border-bottom-color:rgba(255,255,255,.12)}
+  .lrs-col .row:last-child{border-bottom:0}
+  .lrs-col .row strong{display:block;font-size:13px;margin-bottom:2px}
+  .lrs-old .row strong{color:var(--ink)}
+  .lrs-new .row strong{color:#fff}
+  .lrs-old .row span{color:var(--muted)}
+  .lrs-new .row span{color:#B8C5D6}
+
+  /* PILLARS / DNA */
+  .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+  .pillar{
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+    padding:26px;border-radius:12px;transition:all .25s;
+  }
+  .pillar:hover{
+    background:rgba(197,165,114,.08);border-color:var(--gold);transform:translateY(-3px);
+  }
+  .pillar-icon{
+    font-size:22px;font-weight:700;color:var(--gold);
+    font-family:'Playfair Display',serif;margin-bottom:10px;
+  }
+  .pillar h4{color:#fff;font-size:17px;margin-bottom:8px}
+  .pillar p{color:#B8C5D6;font-size:13.5px}
+
+  /* P&L impact */
+  .pl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:20px}
+  .pl-card{
+    background:#fff;border-radius:12px;padding:26px;box-shadow:var(--shadow);
+    border-left:4px solid var(--gold);
+  }
+  .pl-card .pl-label{
+    font-size:11px;letter-spacing:1.5px;font-weight:700;color:var(--muted);
+    text-transform:uppercase;margin-bottom:8px;
+  }
+  .pl-card .pl-num{
+    font-family:'Playfair Display',serif;font-size:32px;color:var(--navy);
+    font-weight:700;display:block;line-height:1;margin-bottom:6px;
+  }
+  .pl-card .pl-cat{font-size:12px;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+  .pl-card p{font-size:13.5px;color:var(--muted)}
+
+  /* SKILLS */
+  .skills-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .skill-block h3{
+    color:var(--navy);font-family:'Playfair Display',serif;font-size:22px;margin-bottom:18px;
+  }
+  .chip-list{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{
+    background:#fff;border:1px solid var(--line);
+    padding:8px 16px;border-radius:30px;font-size:13px;color:var(--ink);
+    font-weight:500;
+  }
+  .chip.gold{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .lang-list{list-style:none;padding:0}
+  .lang-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:14px 0;border-bottom:1px solid var(--line);
+  }
+  .lang-list li:last-child{border-bottom:0}
+  .lang-list .lang-name{font-weight:600;color:var(--navy)}
+  .lang-level{font-size:12px;color:var(--gold);font-weight:700;letter-spacing:1px;text-transform:uppercase}
+
+  /* CONTACT */
+  .contact-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:30px;
+  }
+  .contact-card{
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);
+    padding:28px;border-radius:12px;text-decoration:none;color:#fff;
+    transition:all .25s;display:block;
+  }
+  .contact-card:hover{
+    background:rgba(197,165,114,.1);border-color:var(--gold);transform:translateY(-3px);
+  }
+  .contact-card .c-label{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);
+    font-weight:700;margin-bottom:8px;
+  }
+  .contact-card .c-value{
+    font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:#fff;
+  }
+  .download-row{
+    display:flex;gap:14px;flex-wrap:wrap;margin-top:40px;justify-content:center;
+  }
+
+  /* FOOTER */
+  footer{
+    background:#06192C;color:#8A9BB3;padding:36px 28px;text-align:center;
+    font-size:13px;
+  }
+  footer .sep{margin:0 8px;color:var(--gold)}
+
+  /* Mobile */
+  @media (max-width: 880px){
+    .nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:#fff;
+      flex-direction:column;padding:18px;border-bottom:1px solid var(--line);gap:14px;}
+    .nav-links.open{display:flex}
+    .nav-toggle-mobile{display:block}
+    .about-grid,.lrs-grid,.skills-wrap{grid-template-columns:1fr;gap:30px}
+    .comp-grid,.pillars-grid{grid-template-columns:1fr 1fr}
+    .pl-grid{grid-template-columns:1fr 1fr}
+    .kpis{grid-template-columns:1fr 1fr;margin-top:-30px}
+    .kpi{border-right:0;border-bottom:1px solid var(--line);padding-bottom:18px}
+    .kpi:nth-last-child(-n+2){border-bottom:0;padding-bottom:0}
+    .case-stats,.contact-grid{grid-template-columns:1fr}
+    section{padding:60px 22px}
+    .hero{padding:120px 22px 80px}
+  }
+  @media (max-width:520px){
+    .comp-grid,.pillars-grid,.pl-grid,.kpis{grid-template-columns:1fr}
+    .kpi{border-bottom:1px solid var(--line);padding-bottom:18px}
+    .kpi:last-child{border-bottom:0}
+  }
+
+  /* Hidden lang */
+  [data-lang]{display:none}
+  [data-lang].show{display:block}
+  .chip[data-lang],.tl-bullets li[data-lang],.lang-list li[data-lang]{display:none}
+  .chip[data-lang].show,.tl-bullets li[data-lang].show,.lang-list li[data-lang].show{display:inline-flex}
+  .tl-bullets li[data-lang].show{display:block}
+  .lang-list li[data-lang].show{display:flex}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-wrap">
+    <div class="brand">Luiz <span>Vechiato</span></div>
+    <button class="nav-toggle-mobile" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about" data-i18n="nav-about">Sobre</a>
+      <a href="#experience" data-i18n="nav-exp">Experiência</a>
+      <a href="#cases" data-i18n="nav-cases">Cases</a>
+      <a href="#skills" data-i18n="nav-skills">Competências</a>
+      <a href="#contact" data-i18n="nav-contact">Contato</a>
+      <div class="lang-toggle">
+        <button class="active" data-set-lang="pt">PT</button>
+        <button data-set-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-wrap">
+    <span class="hero-tag" data-i18n="hero-tag">Senior Executive · Operations & Strategic Events</span>
+    <h1>
+      <span data-i18n="hero-title-1">Liderança estratégica</span><br>
+      <span class="accent serif" data-i18n="hero-title-2">orientada a dados.</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero-sub">
+      20+ anos transformando ecossistemas complexos em modelos de negócio escaláveis e eficientes — com excelência operacional, governança financeira e foco em ROI.
+    </p>
+    <div class="hero-cta">
+      <a href="#cases" class="btn btn-primary" data-i18n="hero-cta-1">Ver cases →</a>
+      <a href="#contact" class="btn btn-outline" data-i18n="hero-cta-2">Falar comigo</a>
+    </div>
+  </div>
+</header>
+
+<!-- KPI strip -->
+<div class="wrap">
+  <div class="kpis">
+    <div class="kpi">
+      <span class="kpi-num">+225%</span>
+      <div class="kpi-label" data-i18n="kpi1-l">Crescimento de Portfólio</div>
+      <div class="kpi-sub" data-i18n="kpi1-s">Eventos: 4 → 13/ano</div>
+    </div>
+    <div class="kpi">
+      <span class="kpi-num">-40%</span>
+      <div class="kpi-label" data-i18n="kpi2-l">Redução de Custos</div>
+      <div class="kpi-sub" data-i18n="kpi2-s">Locação — Latam Retail Show</div>
+    </div>
+    <div class="kpi">
+      <span class="kpi-num">92</span>
+      <div class="kpi-label" data-i18n="kpi3-l">NPS Recorde</div>
+      <div class="kpi-sub" data-i18n="kpi3-s">Máxima satisfação de clientes</div>
+    </div>
+    <div class="kpi">
+      <span class="kpi-num">20<span class="small">+</span></span>
+      <div class="kpi-label" data-i18n="kpi4-l">Anos de Experiência</div>
+      <div class="kpi-sub" data-i18n="kpi4-s">Operações & Eventos Corporativos</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section-light">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="about-eyebrow">Perfil Executivo</span>
+    <h2 class="section-title" data-i18n="about-title">Visão estratégica + gestão humanizada.</h2>
+    <p class="section-lead" data-i18n="about-lead">
+      Executivo estratégico reconhecido por traduzir ecossistemas complexos em resultados mensuráveis — crescimento de portfólio, redução de custos e NPS recorde.
+    </p>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p data-i18n="about-p1">
+          Especialista em P&L, governança, inteligência de compras e tomada de decisão orientada a dados, com capacidade comprovada de orquestrar ambientes multi-stakeholder e construir times de alta performance.
+        </p>
+        <p data-i18n="about-p2">
+          Selecionado entre 4 executivos de um universo de 350 profissionais de alta performance para o <strong>PDA — Programa de Desenvolvimento Acelerado</strong>, voltado à formação de futuros C-Levels e presidentes de divisão.
+        </p>
+        <p data-i18n="about-p3">
+          Trajetória consolidada em agências globais (MCI Group, Magnólia, Artevento) e à frente da direção operacional do maior ecossistema de inteligência de varejo do Brasil — <strong>Gouvêa Ecosystem</strong>, com 21 empresas e 350+ consultores.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3 data-i18n="about-card-title">Quick facts</h3>
+        <ul>
+          <li><span data-i18n="qf-loc">Localização</span><span>São Paulo, BR</span></li>
+          <li><span data-i18n="qf-exp">Experiência</span><span data-i18n="qf-exp-v">20+ anos</span></li>
+          <li><span data-i18n="qf-langs">Idiomas</span><span>PT · EN · ES</span></li>
+          <li><span data-i18n="qf-curr">Cargo atual</span><span data-i18n="qf-curr-v">Diretor de Operações</span></li>
+          <li><span data-i18n="qf-edu">Formação</span><span data-i18n="qf-edu-v">Publicidade & Marketing</span></li>
+          <li><span data-i18n="qf-dev">Desenvolvimento</span><span>PDA (Top 4/350)</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Competences -->
+    <div class="comp-grid" style="margin-top:60px">
+      <div class="comp-card">
+        <h3 data-i18n="comp1-t">Visão Estratégica</h3>
+        <p data-i18n="comp1-d">Planejamento de longo prazo, análise de cenários, viabilidade de negócios e ownership de P&L.</p>
+      </div>
+      <div class="comp-card">
+        <h3 data-i18n="comp2-t">Excelência Operacional</h3>
+        <p data-i18n="comp2-d">Gestão end-to-end de projetos, logística complexa e coordenação multi-geografia.</p>
+      </div>
+      <div class="comp-card">
+        <h3 data-i18n="comp3-t">Governança Financeira</h3>
+        <p data-i18n="comp3-d">Controle orçamentário, otimização de custos, decisões orientadas a ROI e inteligência de compras.</p>
+      </div>
+      <div class="comp-card">
+        <h3 data-i18n="comp4-t">Liderança</h3>
+        <p data-i18n="comp4-d">Desenvolvimento de times de alta performance, retenção de talentos e alinhamento transversal.</p>
+      </div>
+      <div class="comp-card">
+        <h3 data-i18n="comp5-t">Inteligência Comercial</h3>
+        <p data-i18n="comp5-d">Atendimento a clientes, account management, estratégia de patrocínios e ecossistemas B2B.</p>
+      </div>
+      <div class="comp-card">
+        <h3 data-i18n="comp6-t">Dados & Análise</h3>
+        <p data-i18n="comp6-d">Definição de KPIs, dashboards, acompanhamento de NPS e gestão baseada em evidências.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="exp-eyebrow">Trajetória</span>
+    <h2 class="section-title" data-i18n="exp-title">Experiência profissional</h2>
+    <p class="section-lead" data-i18n="exp-lead">Mais de duas décadas em agências globais e direção operacional de ecossistemas complexos.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-period" data-i18n="exp1-period">Jun 2022 — Jan 2026 · São Paulo</div>
+        <div class="tl-role" data-i18n="exp1-role">Diretor de Operações & Eventos</div>
+        <div class="tl-company">Gouvêa Experience — Gouvêa Ecosystem</div>
+        <p class="tl-desc" data-i18n="exp1-desc">
+          Ingressou como Gerente de Operações, promovido à Diretoria em jan/2024. Mandato ampliado sobre o portfólio de eventos proprietários do maior ecossistema de inteligência de varejo do Brasil (21 empresas, 350+ consultores).
+        </p>
+        <ul class="tl-bullets">
+          <li data-i18n="exp1-b1">Escalou o portfólio anual de 4 para 13 eventos proprietários (+225%), criando playbooks replicáveis e frameworks de governança sem aumento proporcional de custos.</li>
+          <li data-i18n="exp1-b2">Reduziu em 40% os custos de locação e em 30% os gastos com infraestrutura, por meio de inteligência de compras e scorecards de fornecedores.</li>
+          <li data-i18n="exp1-b3">Transformou o Latam Retail Show — de expo massiva (14.000 m²) para experiência premium C-Level (8.000 m²) —, alcançando NPS de 92, o maior da história do evento.</li>
+          <li data-i18n="exp1-b4">Desenvolveu modelo proprietário de patrocínio B2B, convertendo centros de custo em ativos de receita subsidiada por meio de ativações estratégicas.</li>
+          <li data-i18n="exp1-b5">Coordenou eventos internacionais: NRF Nova York, NRF Ásia-Pacífico e missões comerciais à China.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-period" data-i18n="exp2-period">Jul 2018 — Mai 2022 · São Paulo</div>
+        <div class="tl-role" data-i18n="exp2-role">Project Manager — Patrocínios & Eventos Corporativos</div>
+        <div class="tl-company">MCI Group</div>
+        <p class="tl-desc" data-i18n="exp2-desc">
+          Agência global de eventos. Responsável pelo atendimento estratégico da conta Gartner LATAM (Brasil e México), coordenando simpósios B2B de alta complexidade para líderes Fortune 500.
+        </p>
+        <ul class="tl-bullets">
+          <li data-i18n="exp2-b1">Gerenciou o ciclo completo de patrocínios nos Simpósios Gartner — atendendo Google, IBM, Oracle, Microsoft, Amazon, Cisco e SAP.</li>
+          <li data-i18n="exp2-b2">Coordenação trilíngue (PT/EN/ES) em todas as fases dos eventos: pré-produção, execução e pós-evento.</li>
+          <li data-i18n="exp2-b3">Coordenou eventos híbridos e virtuais de alta segurança para o setor financeiro no Hotel Unique durante a pandemia.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-period" data-i18n="exp3-period">Mai 2017 — Mai 2018 · São Paulo</div>
+        <div class="tl-role" data-i18n="exp3-role">Gerente de Projetos</div>
+        <div class="tl-company">Magnólia Comunicação · Autodesk, Air Liquide, Votorantim</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-period" data-i18n="exp4-period">Ago 2013 — Dez 2016 · São Paulo</div>
+        <div class="tl-role" data-i18n="exp4-role">Account & Project Manager</div>
+        <div class="tl-company">Artevento · Telefônica/Vivo, Nextel, Iveco, Atento</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-period" data-i18n="exp5-period">Jan 2009 — Mai 2012</div>
+        <div class="tl-role" data-i18n="exp5-role">Gerente de Projetos — Circuito Brahma de Rodeio</div>
+        <div class="tl-company">Santarena Eventos / AmBev</div>
+        <p class="tl-desc" data-i18n="exp5-desc">Circuito nacional: 1.000+ prestadores simultâneos em múltiplos estados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES (from PPT) -->
+<section id="cases" class="section-light">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="cases-eyebrow">Cases & Resultados</span>
+    <h2 class="section-title" data-i18n="cases-title">Gouvêa Ecosystem & Latam Retail Show</h2>
+    <p class="section-lead" data-i18n="cases-lead">
+      O maior e mais completo ecossistema de serviços e soluções focado em consumo e varejo da América Latina.
+    </p>
+
+    <!-- Ecosystem context -->
+    <div class="case-hero">
+      <h3 data-i18n="case-eco-t">Contexto de atuação — Gouvêa Ecosystem</h3>
+      <p data-i18n="case-eco-p">
+        A direção operacional deste ecossistema fundamenta a capacidade de gestão de múltiplos stakeholders e projetos complexos.
+      </p>
+      <div class="case-stats">
+        <div class="case-stat">
+          <span class="case-stat-num">+2K</span>
+          <div class="case-stat-label" data-i18n="case-eco-s1">Projetos completados</div>
+        </div>
+        <div class="case-stat">
+          <span class="case-stat-num">+1K</span>
+          <div class="case-stat-label" data-i18n="case-eco-s2">Clientes atendidos</div>
+        </div>
+        <div class="case-stat">
+          <span class="case-stat-num">+400</span>
+          <div class="case-stat-label" data-i18n="case-eco-s3">Projetos por ano</div>
+        </div>
+        <div class="case-stat">
+          <span class="case-stat-num">+350</span>
+          <div class="case-stat-label" data-i18n="case-eco-s4">Consultores especializados</div>
+        </div>
+        <div class="case-stat">
+          <span class="case-stat-num">21</span>
+          <div class="case-stat-label" data-i18n="case-eco-s5">Empresas no grupo</div>
+        </div>
+        <div class="case-stat">
+          <span class="case-stat-num">+100K</span>
+          <div class="case-stat-label" data-i18n="case-eco-s6">Participantes LRS</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LRS Before vs After -->
+    <div class="lrs">
+      <h3 data-i18n="lrs-t">Latam Retail Show — Evolução estratégica</h3>
+      <p data-i18n="lrs-p">Transformação do modelo de negócios para maximizar valor e rentabilidade (2022 → 2025).</p>
+      <div class="lrs-grid">
+        <div class="lrs-col lrs-old">
+          <h4 data-i18n="lrs-old-h">2022 · Modelo anterior</h4>
+          <div class="row"><strong data-i18n="lrs-old-1t">Expo Aberta</strong><span data-i18n="lrs-old-1d">Foco em volume de visitantes gerais</span></div>
+          <div class="row"><strong data-i18n="lrs-old-2t">14.000 m²</strong><span data-i18n="lrs-old-2d">Área bruta extensa e dispersa</span></div>
+          <div class="row"><strong data-i18n="lrs-old-3t">Alto custo operacional</strong><span data-i18n="lrs-old-3d">Logística complexa e staff inflado</span></div>
+          <div class="row"><strong data-i18n="lrs-old-4t">Público geral</strong><span data-i18n="lrs-old-4d">NPS variável e dispersão de leads</span></div>
+        </div>
+        <div class="lrs-col lrs-new">
+          <h4 data-i18n="lrs-new-h">2025 · Modelo estratégico</h4>
+          <div class="row"><strong data-i18n="lrs-new-1t">Congresso 100% Pago / Elite</strong><span data-i18n="lrs-new-1d">Foco em qualificação e decisores C-Level</span></div>
+          <div class="row"><strong data-i18n="lrs-new-2t">8.000 m² (Otimizado)</strong><span data-i18n="lrs-new-2d">Layout compacto e eficiente</span></div>
+          <div class="row"><strong data-i18n="lrs-new-3t">Eficiência de custos</strong><span data-i18n="lrs-new-3d">Redução em logística e montagem (-30%)</span></div>
+          <div class="row"><strong data-i18n="lrs-new-4t">Público qualificado</strong><span data-i18n="lrs-new-4d">NPS Recorde: 92 de satisfação</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- P&L Pillars -->
+    <h3 class="section-title" style="font-size:28px;margin-top:60px;margin-bottom:8px" data-i18n="pl-t">Pilares de gestão com impacto no P&L</h3>
+    <p class="section-lead" data-i18n="pl-p">Redução de custos operacionais e maximização de receitas via inteligência e parcerias estratégicas.</p>
+    <div class="pl-grid">
+      <div class="pl-card">
+        <div class="pl-label" data-i18n="pl1-l">Venue & Espaço</div>
+        <span class="pl-num">-40%</span>
+        <div class="pl-cat" data-i18n="pl1-c">Custos de locação</div>
+        <p data-i18n="pl1-d">Otimização inteligente da área locada (de 14k m² para 8k m² no LRS) sem comprometer percepção de valor.</p>
+      </div>
+      <div class="pl-card">
+        <div class="pl-label" data-i18n="pl2-l">Infraestrutura</div>
+        <span class="pl-num">-30%</span>
+        <div class="pl-cat" data-i18n="pl2-c">Custos de montagem</div>
+        <p data-i18n="pl2-d">Cenografia digital modular e substituição de estruturas pesadas por soluções leves e tecnológicas.</p>
+      </div>
+      <div class="pl-card">
+        <div class="pl-label" data-i18n="pl3-l">Compras Estratégicas</div>
+        <span class="pl-num">-30%</span>
+        <div class="pl-cat" data-i18n="pl3-c">Custos diretos</div>
+        <p data-i18n="pl3-d">Renegociação macro, scorecards de fornecedores e consolidação de volumes entre eventos.</p>
+      </div>
+      <div class="pl-card">
+        <div class="pl-label" data-i18n="pl4-l">Vendas & Renovação</div>
+        <span class="pl-num serif" style="font-size:24px" data-i18n="pl4-n">Digital</span>
+        <div class="pl-cat" data-i18n="pl4-c">Ticketing & CAC</div>
+        <p data-i18n="pl4-d">Digitalização do ticketing reduzindo CAC e geração de negócios durante o evento para alta renovação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DNA / Pillars (dark section) -->
+<section class="section-dark">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="dna-eyebrow">DNA Estratégico Executivo</span>
+    <h2 class="section-title" data-i18n="dna-title">Capacidades que transformam projetos em ecossistemas de sucesso.</h2>
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-icon">01</div>
+        <h4 data-i18n="dna1-t">Visão Estratégica</h4>
+        <p data-i18n="dna1-d">Projetar cenários futuros e antecipar tendências com planejamento de longo prazo.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">02</div>
+        <h4 data-i18n="dna2-t">Orquestrador de Complexidade</h4>
+        <p data-i18n="dna2-d">Gestão simultânea de múltiplos stakeholders, projetos e variáveis em alta volatilidade.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">03</div>
+        <h4 data-i18n="dna3-t">Arquiteto de Processos</h4>
+        <p data-i18n="dna3-d">Redesenho operacional para máxima eficiência com governança e compliance rigorosos.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">04</div>
+        <h4 data-i18n="dna4-t">Liderança Transformacional</h4>
+        <p data-i18n="dna4-d">Desenvolvimento de talentos equilibrando rigor processual e gestão humanizada.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">05</div>
+        <h4 data-i18n="dna5-t">Inteligência Comercial</h4>
+        <p data-i18n="dna5-d">Construção de ecossistemas de valor com negociação estratégica e gestão criteriosa de P&L.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">06</div>
+        <h4 data-i18n="dna6-t">Agente de Mudança</h4>
+        <p data-i18n="dna6-d">Transformação de modelos de negócio com soluções digitais e tecnológicas inovadoras.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section-light">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="skills-eyebrow">Competências, Idiomas & Formação</span>
+    <h2 class="section-title" data-i18n="skills-title">Conjunto de habilidades</h2>
+
+    <div class="skills-wrap" style="margin-top:30px">
+      <div class="skill-block">
+        <h3 data-i18n="sk-tools-t">Ferramentas & Plataformas</h3>
+        <div class="chip-list">
+          <span class="chip">AI Agents</span>
+          <span class="chip">Microsoft 365</span>
+          <span class="chip">Google Workspace</span>
+          <span class="chip">Asana</span>
+          <span class="chip">Trello</span>
+          <span class="chip">Kanban</span>
+        </div>
+
+        <h3 style="margin-top:36px" data-i18n="sk-edu-t">Formação & Cursos</h3>
+        <div class="chip-list">
+          <span class="chip gold" data-i18n="sk-edu1">Publicidade & Marketing — Univ. Metodista de Piracicaba (2004–07)</span>
+          <span class="chip" data-i18n="sk-edu2">MBA em Gestão de Projetos — USP/ESALQ (em pausa)</span>
+          <span class="chip" data-i18n="sk-edu3">PDA — Programa de Desenvolvimento Acelerado (Top 4/350)</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <h3 data-i18n="sk-langs-t">Idiomas</h3>
+        <ul class="lang-list">
+          <li><span class="lang-name" data-i18n="sk-lang-pt">Português</span><span class="lang-level" data-i18n="sk-lang-pt-l">Nativo</span></li>
+          <li><span class="lang-name" data-i18n="sk-lang-en">Inglês</span><span class="lang-level" data-i18n="sk-lang-en-l">Avançado</span></li>
+          <li><span class="lang-name" data-i18n="sk-lang-es">Espanhol</span><span class="lang-level" data-i18n="sk-lang-es-l">Avançado</span></li>
+        </ul>
+
+        <h3 style="margin-top:36px" data-i18n="sk-clients-t">Marcas atendidas</h3>
+        <div class="chip-list">
+          <span class="chip">Google</span>
+          <span class="chip">IBM</span>
+          <span class="chip">Oracle</span>
+          <span class="chip">Microsoft</span>
+          <span class="chip">Amazon</span>
+          <span class="chip">Cisco</span>
+          <span class="chip">SAP</span>
+          <span class="chip">Gartner</span>
+          <span class="chip">Autodesk</span>
+          <span class="chip">Air Liquide</span>
+          <span class="chip">Votorantim</span>
+          <span class="chip">Telefônica/Vivo</span>
+          <span class="chip">Nextel</span>
+          <span class="chip">Iveco</span>
+          <span class="chip">Atento</span>
+          <span class="chip">AmBev</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-dark">
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow" data-i18n="contact-eyebrow">Próximos passos</span>
+    <h2 class="section-title" data-i18n="contact-title">Vamos conversar.</h2>
+    <p class="section-lead" style="margin-left:auto;margin-right:auto" data-i18n="contact-lead">
+      Estou à disposição para detalhar minha trajetória, cases e como posso contribuir com a sua organização.
+    </p>
+
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:lhvechiato@yahoo.com.br">
+        <div class="c-label">E-mail</div>
+        <div class="c-value">lhvechiato@yahoo.com.br</div>
+      </a>
+      <a class="contact-card" href="tel:+5511982081730">
+        <div class="c-label" data-i18n="c-phone">Telefone</div>
+        <div class="c-value">+55 11 98208-1730</div>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/luiz-henrique-vechiato" target="_blank" rel="noopener">
+        <div class="c-label">LinkedIn</div>
+        <div class="c-value">/in/luiz-henrique-vechiato</div>
+      </a>
+      <a class="contact-card" href="#about">
+        <div class="c-label" data-i18n="c-loc">Localização</div>
+        <div class="c-value">São Paulo, Brasil</div>
+      </a>
+    </div>
+
+    <div class="download-row">
+      <a href="Luiz_Vechiato_CV_PT.pdf" target="_blank" class="btn btn-primary" download>
+        ⬇ <span data-i18n="dl-pt">Download CV (Português)</span>
+      </a>
+      <a href="Luiz_Vechiato_CV_EN.pdf" target="_blank" class="btn btn-primary" download>
+        ⬇ <span data-i18n="dl-en">Download CV (English)</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>Luiz Vechiato</strong><span class="sep">·</span>
+  <span data-i18n="ft-role">Senior Executive · Operations & Strategic Events</span><span class="sep">·</span>
+  © 2026
+</footer>
+
+<script>
+const i18n = {
+  pt: {
+    "nav-about":"Sobre","nav-exp":"Experiência","nav-cases":"Cases","nav-skills":"Competências","nav-contact":"Contato",
+    "hero-tag":"Executivo Sênior · Operações & Eventos Estratégicos",
+    "hero-title-1":"Liderança estratégica",
+    "hero-title-2":"orientada a dados.",
+    "hero-sub":"20+ anos transformando ecossistemas complexos em modelos de negócio escaláveis e eficientes — com excelência operacional, governança financeira e foco em ROI.",
+    "hero-cta-1":"Ver cases →","hero-cta-2":"Falar comigo",
+    "kpi1-l":"Crescimento de Portfólio","kpi1-s":"Eventos: 4 → 13/ano",
+    "kpi2-l":"Redução de Custos","kpi2-s":"Locação — Latam Retail Show",
+    "kpi3-l":"NPS Recorde","kpi3-s":"Máxima satisfação de clientes",
+    "kpi4-l":"Anos de Experiência","kpi4-s":"Operações & Eventos Corporativos",
+    "about-eyebrow":"Perfil Executivo",
+    "about-title":"Visão estratégica + gestão humanizada.",
+    "about-lead":"Executivo estratégico reconhecido por traduzir ecossistemas complexos em resultados mensuráveis — crescimento de portfólio, redução de custos e NPS recorde.",
+    "about-p1":"Especialista em P&L, governança, inteligência de compras e tomada de decisão orientada a dados, com capacidade comprovada de orquestrar ambientes multi-stakeholder e construir times de alta performance.",
+    "about-p2":"Selecionado entre 4 executivos de um universo de 350 profissionais de alta performance para o <strong>PDA — Programa de Desenvolvimento Acelerado</strong>, voltado à formação de futuros C-Levels e presidentes de divisão.",
+    "about-p3":"Trajetória consolidada em agências globais (MCI Group, Magnólia, Artevento) e à frente da direção operacional do maior ecossistema de inteligência de varejo do Brasil — <strong>Gouvêa Ecosystem</strong>, com 21 empresas e 350+ consultores.",
+    "about-card-title":"Quick facts",
+    "qf-loc":"Localização","qf-exp":"Experiência","qf-exp-v":"20+ anos","qf-langs":"Idiomas",
+    "qf-curr":"Cargo atual","qf-curr-v":"Diretor de Operações","qf-edu":"Formação",
+    "qf-edu-v":"Publicidade & Marketing","qf-dev":"Desenvolvimento",
+    "comp1-t":"Visão Estratégica","comp1-d":"Planejamento de longo prazo, análise de cenários, viabilidade de negócios e ownership de P&L.",
+    "comp2-t":"Excelência Operacional","comp2-d":"Gestão end-to-end de projetos, logística complexa e coordenação multi-geografia.",
+    "comp3-t":"Governança Financeira","comp3-d":"Controle orçamentário, otimização de custos, decisões orientadas a ROI e inteligência de compras.",
+    "comp4-t":"Liderança","comp4-d":"Desenvolvimento de times de alta performance, retenção de talentos e alinhamento transversal.",
+    "comp5-t":"Inteligência Comercial","comp5-d":"Atendimento a clientes, account management, estratégia de patrocínios e ecossistemas B2B.",
+    "comp6-t":"Dados & Análise","comp6-d":"Definição de KPIs, dashboards, acompanhamento de NPS e gestão baseada em evidências.",
+    "exp-eyebrow":"Trajetória","exp-title":"Experiência profissional",
+    "exp-lead":"Mais de duas décadas em agências globais e direção operacional de ecossistemas complexos.",
+    "exp1-period":"Jun 2022 — Jan 2026 · São Paulo",
+    "exp1-role":"Diretor de Operações & Eventos",
+    "exp1-desc":"Ingressou como Gerente de Operações, promovido à Diretoria em jan/2024. Mandato ampliado sobre o portfólio de eventos proprietários do maior ecossistema de inteligência de varejo do Brasil (21 empresas, 350+ consultores).",
+    "exp1-b1":"Escalou o portfólio anual de 4 para 13 eventos proprietários (+225%), criando playbooks replicáveis e frameworks de governança sem aumento proporcional de custos.",
+    "exp1-b2":"Reduziu em 40% os custos de locação e em 30% os gastos com infraestrutura, por meio de inteligência de compras e scorecards de fornecedores.",
+    "exp1-b3":"Transformou o Latam Retail Show — de expo massiva (14.000 m²) para experiência premium C-Level (8.000 m²) —, alcançando NPS de 92, o maior da história do evento.",
+    "exp1-b4":"Desenvolveu modelo proprietário de patrocínio B2B, convertendo centros de custo em ativos de receita subsidiada por meio de ativações estratégicas.",
+    "exp1-b5":"Coordenou eventos internacionais: NRF Nova York, NRF Ásia-Pacífico e missões comerciais à China.",
+    "exp2-period":"Jul 2018 — Mai 2022 · São Paulo",
+    "exp2-role":"Project Manager — Patrocínios & Eventos Corporativos",
+    "exp2-desc":"Agência global de eventos. Responsável pelo atendimento estratégico da conta Gartner LATAM (Brasil e México), coordenando simpósios B2B de alta complexidade para líderes Fortune 500.",
+    "exp2-b1":"Gerenciou o ciclo completo de patrocínios nos Simpósios Gartner — atendendo Google, IBM, Oracle, Microsoft, Amazon, Cisco e SAP.",
+    "exp2-b2":"Coordenação trilíngue (PT/EN/ES) em todas as fases dos eventos: pré-produção, execução e pós-evento.",
+    "exp2-b3":"Coordenou eventos híbridos e virtuais de alta segurança para o setor financeiro no Hotel Unique durante a pandemia.",
+    "exp3-period":"Mai 2017 — Mai 2018 · São Paulo",
+    "exp3-role":"Gerente de Projetos",
+    "exp4-period":"Ago 2013 — Dez 2016 · São Paulo",
+    "exp4-role":"Account & Project Manager",
+    "exp5-period":"Jan 2009 — Mai 2012",
+    "exp5-role":"Gerente de Projetos — Circuito Brahma de Rodeio",
+    "exp5-desc":"Circuito nacional: 1.000+ prestadores simultâneos em múltiplos estados.",
+    "cases-eyebrow":"Cases & Resultados",
+    "cases-title":"Gouvêa Ecosystem & Latam Retail Show",
+    "cases-lead":"O maior e mais completo ecossistema de serviços e soluções focado em consumo e varejo da América Latina.",
+    "case-eco-t":"Contexto de atuação — Gouvêa Ecosystem",
+    "case-eco-p":"A direção operacional deste ecossistema fundamenta a capacidade de gestão de múltiplos stakeholders e projetos complexos.",
+    "case-eco-s1":"Projetos completados","case-eco-s2":"Clientes atendidos","case-eco-s3":"Projetos por ano",
+    "case-eco-s4":"Consultores especializados","case-eco-s5":"Empresas no grupo","case-eco-s6":"Participantes LRS",
+    "lrs-t":"Latam Retail Show — Evolução estratégica",
+    "lrs-p":"Transformação do modelo de negócios para maximizar valor e rentabilidade (2022 → 2025).",
+    "lrs-old-h":"2022 · Modelo anterior",
+    "lrs-old-1t":"Expo Aberta","lrs-old-1d":"Foco em volume de visitantes gerais",
+    "lrs-old-2t":"14.000 m²","lrs-old-2d":"Área bruta extensa e dispersa",
+    "lrs-old-3t":"Alto custo operacional","lrs-old-3d":"Logística complexa e staff inflado",
+    "lrs-old-4t":"Público geral","lrs-old-4d":"NPS variável e dispersão de leads",
+    "lrs-new-h":"2025 · Modelo estratégico",
+    "lrs-new-1t":"Congresso 100% Pago / Elite","lrs-new-1d":"Foco em qualificação e decisores C-Level",
+    "lrs-new-2t":"8.000 m² (Otimizado)","lrs-new-2d":"Layout compacto e eficiente",
+    "lrs-new-3t":"Eficiência de custos","lrs-new-3d":"Redução em logística e montagem (-30%)",
+    "lrs-new-4t":"Público qualificado","lrs-new-4d":"NPS Recorde: 92 de satisfação",
+    "pl-t":"Pilares de gestão com impacto no P&L",
+    "pl-p":"Redução de custos operacionais e maximização de receitas via inteligência e parcerias estratégicas.",
+    "pl1-l":"Venue & Espaço","pl1-c":"Custos de locação","pl1-d":"Otimização inteligente da área locada (de 14k m² para 8k m² no LRS) sem comprometer percepção de valor.",
+    "pl2-l":"Infraestrutura","pl2-c":"Custos de montagem","pl2-d":"Cenografia digital modular e substituição de estruturas pesadas por soluções leves e tecnológicas.",
+    "pl3-l":"Compras Estratégicas","pl3-c":"Custos diretos","pl3-d":"Renegociação macro, scorecards de fornecedores e consolidação de volumes entre eventos.",
+    "pl4-l":"Vendas & Renovação","pl4-n":"Digital","pl4-c":"Ticketing & CAC","pl4-d":"Digitalização do ticketing reduzindo CAC e geração de negócios durante o evento para alta renovação.",
+    "dna-eyebrow":"DNA Estratégico Executivo",
+    "dna-title":"Capacidades que transformam projetos em ecossistemas de sucesso.",
+    "dna1-t":"Visão Estratégica","dna1-d":"Projetar cenários futuros e antecipar tendências com planejamento de longo prazo.",
+    "dna2-t":"Orquestrador de Complexidade","dna2-d":"Gestão simultânea de múltiplos stakeholders, projetos e variáveis em alta volatilidade.",
+    "dna3-t":"Arquiteto de Processos","dna3-d":"Redesenho operacional para máxima eficiência com governança e compliance rigorosos.",
+    "dna4-t":"Liderança Transformacional","dna4-d":"Desenvolvimento de talentos equilibrando rigor processual e gestão humanizada.",
+    "dna5-t":"Inteligência Comercial","dna5-d":"Construção de ecossistemas de valor com negociação estratégica e gestão criteriosa de P&L.",
+    "dna6-t":"Agente de Mudança","dna6-d":"Transformação de modelos de negócio com soluções digitais e tecnológicas inovadoras.",
+    "skills-eyebrow":"Competências, Idiomas & Formação",
+    "skills-title":"Conjunto de habilidades",
+    "sk-tools-t":"Ferramentas & Plataformas",
+    "sk-edu-t":"Formação & Cursos",
+    "sk-edu1":"Publicidade & Marketing — Univ. Metodista de Piracicaba (2004–07)",
+    "sk-edu2":"MBA em Gestão de Projetos — USP/ESALQ (em pausa)",
+    "sk-edu3":"PDA — Programa de Desenvolvimento Acelerado (Top 4/350)",
+    "sk-langs-t":"Idiomas",
+    "sk-lang-pt":"Português","sk-lang-pt-l":"Nativo",
+    "sk-lang-en":"Inglês","sk-lang-en-l":"Avançado",
+    "sk-lang-es":"Espanhol","sk-lang-es-l":"Avançado",
+    "sk-clients-t":"Marcas atendidas",
+    "contact-eyebrow":"Próximos passos","contact-title":"Vamos conversar.",
+    "contact-lead":"Estou à disposição para detalhar minha trajetória, cases e como posso contribuir com a sua organização.",
+    "c-phone":"Telefone","c-loc":"Localização",
+    "dl-pt":"Baixar CV (Português)","dl-en":"Baixar CV (Inglês)",
+    "ft-role":"Executivo Sênior · Operações & Eventos Estratégicos"
+  },
+  en: {
+    "nav-about":"About","nav-exp":"Experience","nav-cases":"Cases","nav-skills":"Skills","nav-contact":"Contact",
+    "hero-tag":"Senior Executive · Operations & Strategic Events",
+    "hero-title-1":"Strategic leadership",
+    "hero-title-2":"powered by data.",
+    "hero-sub":"20+ years turning complex ecosystems into scalable, efficient business models — with operational excellence, financial governance and ROI-driven decisions.",
+    "hero-cta-1":"See cases →","hero-cta-2":"Get in touch",
+    "kpi1-l":"Portfolio Growth","kpi1-s":"Events scaled: 4 → 13/year",
+    "kpi2-l":"Cost Reduction","kpi2-s":"Venue — Latam Retail Show",
+    "kpi3-l":"Record NPS","kpi3-s":"Highest client satisfaction",
+    "kpi4-l":"Years of Experience","kpi4-s":"Operations & Corporate Events",
+    "about-eyebrow":"Executive Profile",
+    "about-title":"Strategic vision + human-centred leadership.",
+    "about-lead":"Strategic executive recognised for translating complex ecosystems into measurable results — portfolio growth, cost reduction and record NPS.",
+    "about-p1":"Specialist in P&L, governance, procurement intelligence and data-driven decision-making, with proven ability to orchestrate multi-stakeholder environments and build high-performance teams.",
+    "about-p2":"Selected as 1 of 4 executives out of 350 high-performers for the <strong>PDA — Accelerated Leadership Programme</strong>, designed to develop future C-Level leaders and divisional presidents.",
+    "about-p3":"Track record across global agencies (MCI Group, Magnólia, Artevento) and leading operations at Brazil's largest retail intelligence ecosystem — <strong>Gouvêa Ecosystem</strong> (21 companies, 350+ consultants).",
+    "about-card-title":"Quick facts",
+    "qf-loc":"Location","qf-exp":"Experience","qf-exp-v":"20+ years","qf-langs":"Languages",
+    "qf-curr":"Current Role","qf-curr-v":"Director of Operations","qf-edu":"Education",
+    "qf-edu-v":"Advertising & Marketing","qf-dev":"Development",
+    "comp1-t":"Strategic Vision","comp1-d":"Long-range planning, scenario analysis, business viability assessment and P&L ownership.",
+    "comp2-t":"Operations Excellence","comp2-d":"End-to-end project lifecycle, complex logistics and multi-geography coordination.",
+    "comp3-t":"Financial Governance","comp3-d":"Budget control, cost optimisation, ROI-driven decisions and procurement intelligence.",
+    "comp4-t":"Leadership","comp4-d":"High-performance team development, talent retention and cross-functional alignment.",
+    "comp5-t":"Commercial Intelligence","comp5-d":"Client services, account management, sponsorship strategy and B2B ecosystem building.",
+    "comp6-t":"Data & Analytics","comp6-d":"KPI definition, dashboard reporting, NPS tracking and evidence-based management.",
+    "exp-eyebrow":"Career Journey","exp-title":"Professional experience",
+    "exp-lead":"More than two decades across global agencies and operational leadership of complex ecosystems.",
+    "exp1-period":"Jun 2022 — Jan 2026 · São Paulo",
+    "exp1-role":"Director of Operations & Events",
+    "exp1-desc":"Joined as Head of Operations, promoted to Director in Jan 2024. Expanded mandate over the proprietary events portfolio of Brazil's largest retail intelligence ecosystem (21 companies, 350+ consultants).",
+    "exp1-b1":"Scaled annual events portfolio from 4 to 13 proprietary events (+225%), establishing replicable playbooks and governance frameworks without proportional cost increases.",
+    "exp1-b2":"Engineered 40% reduction in venue costs and 30% reduction in infrastructure spend through procurement intelligence and vendor scorecards.",
+    "exp1-b3":"Transformed Latam Retail Show — from mass-attendance expo (14,000 m²) into premium C-Level experience (8,000 m²) — achieving NPS of 92, the highest in the event's history.",
+    "exp1-b4":"Built proprietary B2B sponsorship model, converting event cost centres into partially subsidised revenue assets through strategic brand activations.",
+    "exp1-b5":"Managed international events: NRF New York, NRF Asia Pacific, and trade missions to China.",
+    "exp2-period":"Jul 2018 — May 2022 · São Paulo",
+    "exp2-role":"Project Manager — Sponsorship & Corporate Events",
+    "exp2-desc":"Global events agency. Led strategic account management for Gartner LATAM (Brazil and Mexico), coordinating high-complexity B2B symposia for Fortune 500 technology leaders.",
+    "exp2-b1":"Managed full sponsorship lifecycle for Gartner Symposia — servicing Google, IBM, Oracle, Microsoft, Amazon, Cisco and SAP.",
+    "exp2-b2":"Delivered trilingual (PT/EN/ES) event coordination across pre-production, live event and post-event phases.",
+    "exp2-b3":"Coordinated hybrid and virtual high-security events for the financial sector at Hotel Unique during the pandemic.",
+    "exp3-period":"May 2017 — May 2018 · São Paulo",
+    "exp3-role":"Project Manager",
+    "exp4-period":"Aug 2013 — Dec 2016 · São Paulo",
+    "exp4-role":"Account & Project Manager",
+    "exp5-period":"Jan 2009 — May 2012",
+    "exp5-role":"Project Manager — Brahma Rodeo Circuit",
+    "exp5-desc":"National circuit: 1,000+ simultaneous service providers across multiple states.",
+    "cases-eyebrow":"Cases & Results",
+    "cases-title":"Gouvêa Ecosystem & Latam Retail Show",
+    "cases-lead":"The largest and most complete ecosystem of services and solutions focused on consumer and retail in Latin America.",
+    "case-eco-t":"Operating context — Gouvêa Ecosystem",
+    "case-eco-p":"Operational leadership of this ecosystem underpins the ability to manage multiple stakeholders and complex projects.",
+    "case-eco-s1":"Completed projects","case-eco-s2":"Clients served","case-eco-s3":"Projects per year",
+    "case-eco-s4":"Specialised consultants","case-eco-s5":"Companies in the group","case-eco-s6":"LRS attendees",
+    "lrs-t":"Latam Retail Show — Strategic evolution",
+    "lrs-p":"Business model transformation to maximise value and profitability (2022 → 2025).",
+    "lrs-old-h":"2022 · Previous model",
+    "lrs-old-1t":"Open Expo","lrs-old-1d":"Focused on general visitor volume",
+    "lrs-old-2t":"14,000 m²","lrs-old-2d":"Extensive and dispersed gross area",
+    "lrs-old-3t":"High operational cost","lrs-old-3d":"Complex logistics and inflated staff",
+    "lrs-old-4t":"General audience","lrs-old-4d":"Variable NPS and lead dispersion",
+    "lrs-new-h":"2025 · Strategic model",
+    "lrs-new-1t":"100% Paid / Elite Congress","lrs-new-1d":"Focus on qualified C-Level decision-makers",
+    "lrs-new-2t":"8,000 m² (Optimised)","lrs-new-2d":"Compact and efficient layout",
+    "lrs-new-3t":"Cost efficiency","lrs-new-3d":"Reduction in logistics and assembly (-30%)",
+    "lrs-new-4t":"Qualified audience","lrs-new-4d":"Record NPS: 92 satisfaction score",
+    "pl-t":"Management pillars with P&L impact",
+    "pl-p":"Operational cost reduction and revenue maximisation via intelligence and strategic partnerships.",
+    "pl1-l":"Venue & Space","pl1-c":"Venue costs","pl1-d":"Intelligent optimisation of leased area (from 14k m² to 8k m² at LRS) without compromising perceived value.",
+    "pl2-l":"Infrastructure","pl2-c":"Assembly costs","pl2-d":"Modular digital scenography replacing heavy structures with lightweight, technological solutions.",
+    "pl3-l":"Strategic Procurement","pl3-c":"Direct costs","pl3-d":"Macro renegotiation, vendor scorecards and volume consolidation across portfolio events.",
+    "pl4-l":"Sales & Renewal","pl4-n":"Digital","pl4-c":"Ticketing & CAC","pl4-d":"Digital ticketing lowering CAC and on-event business generation to drive high renewal rates.",
+    "dna-eyebrow":"Executive Strategic DNA",
+    "dna-title":"Capabilities that turn projects into successful ecosystems.",
+    "dna1-t":"Strategic Vision","dna1-d":"Projecting future scenarios and anticipating trends through long-range planning.",
+    "dna2-t":"Complexity Orchestrator","dna2-d":"Simultaneous management of multiple stakeholders, projects and variables in high-volatility environments.",
+    "dna3-t":"Process Architect","dna3-d":"Operational redesign for maximum efficiency with rigorous governance and compliance.",
+    "dna4-t":"Transformational Leadership","dna4-d":"Talent development balancing procedural rigour with human-centred management.",
+    "dna5-t":"Commercial Intelligence","dna5-d":"Building integrated value ecosystems with strategic negotiation and rigorous P&L management.",
+    "dna6-t":"Change Agent","dna6-d":"Business model transformation through innovative digital and technological solutions.",
+    "skills-eyebrow":"Skills, Languages & Education",
+    "skills-title":"Skill set",
+    "sk-tools-t":"Tools & Platforms",
+    "sk-edu-t":"Education & Programmes",
+    "sk-edu1":"Advertising & Marketing — Methodist Univ. of Piracicaba (2004–07)",
+    "sk-edu2":"MBA in Project Management — USP/ESALQ (on hold)",
+    "sk-edu3":"PDA — Accelerated Leadership Programme (Top 4/350)",
+    "sk-langs-t":"Languages",
+    "sk-lang-pt":"Portuguese","sk-lang-pt-l":"Native",
+    "sk-lang-en":"English","sk-lang-en-l":"Advanced",
+    "sk-lang-es":"Spanish","sk-lang-es-l":"Advanced",
+    "sk-clients-t":"Brands served",
+    "contact-eyebrow":"Next steps","contact-title":"Let's talk.",
+    "contact-lead":"Happy to walk you through my background, cases and how I can contribute to your organisation.",
+    "c-phone":"Phone","c-loc":"Location",
+    "dl-pt":"Download CV (Portuguese)","dl-en":"Download CV (English)",
+    "ft-role":"Senior Executive · Operations & Strategic Events"
+  }
+};
+
+function setLang(lang){
+  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(i18n[lang] && i18n[lang][key] !== undefined){
+      el.innerHTML = i18n[lang][key];
+    }
+  });
+  document.querySelectorAll('.lang-toggle button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.setLang === lang);
+  });
+  try{ localStorage.setItem('lv-lang', lang); }catch(e){}
+}
+
+document.querySelectorAll('.lang-toggle button').forEach(b=>{
+  b.addEventListener('click',()=>setLang(b.dataset.setLang));
+});
+
+// Init - default PT, but honour stored choice
+let initLang = 'pt';
+try{
+  const stored = localStorage.getItem('lv-lang');
+  if(stored === 'en' || stored === 'pt') initLang = stored;
+}catch(e){}
+setLang(initLang);
+
+// Close mobile nav on link click
+document.querySelectorAll('#navLinks a').forEach(a=>{
+  a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+</body>
+</html>
